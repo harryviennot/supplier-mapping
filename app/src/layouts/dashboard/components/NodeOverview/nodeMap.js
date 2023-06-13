@@ -1,14 +1,35 @@
-// eslint-disable-next-line
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Graph } from "react-d3-graph";
 
-const NodeMap = () => {
-  // graph payload (with minimalist structure)
+const NodeDetails = ({ node, onClose }) => {
+  if (!node) {
+    return null;
+  }
+
+  return (
+    <div style={{
+      border: '1px solid #ddd',
+      borderRadius: '10px',
+      padding: '10px',
+      marginTop: '15px',
+      backgroundColor: '#f9f9f9'
+    }}>
+      <h2>Node Details:</h2>
+      <p><strong>Name:</strong> {node.id}</p>
+      <p><strong>Commodities:</strong> {node.Commodities.join(', ')}</p>
+      <p><strong>Depth:</strong> {node.depth}</p>
+      <button onClick={onClose} style={{ padding: '5px 10px', borderRadius: '5px', cursor: 'pointer'}}>Close</button>
+    </div>
+  );
+};
+
+const NodeMap = ({ onClickNode }) => {
+  const [selectedNode, setSelectedNode] = useState(null);
   const data = {
     nodes: [
       {
         id: "Harry",
-        Commodities: ["sas", "esses"],
+        Commodities: ["bslack", "esses"],
       },
       {
         id: "Sally",
@@ -24,34 +45,44 @@ const NodeMap = () => {
       { source: "Harry", target: "Alice" },
     ],
   };
+  const handleNodeClick = function (nodeId) {
+    const node = data.nodes.find((node) => node.id === nodeId);
+    onClickNode(node);
+  };
 
-  const [nodeColor, setNodeColor] = useState("");
-  const [nodeSize, setNodeSize] = useState(120);
+  const colorMapping = {
+    "sas": "red",
+    "esses": "green",
+    "sdds": "blue",
+    "sdsds": "yellow",
+    "bslack": "purple",
+  };
 
-  useEffect(() => {
-    if (data.nodes) {
-      setNodeColor(data.nodes[0].Commodities[0]);
-      setNodeSize(120 + data.links.length * 10);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
+  // Compute number of links per node
+  const linkCount = {};
+  data.links.forEach(link => {
+    linkCount[link.source] = (linkCount[link.source] || 0) + 1;
+    linkCount[link.target] = (linkCount[link.target] || 0) + 1;
+  });
+
+  // Add a size property and color to each node
+  data.nodes.forEach(node => {
+    node.size = 120 + (linkCount[node.id] || 0) * 200;
+    node.color = colorMapping[node.Commodities[0]]; // setting the color according to the first commodity
+  });
 
   const myConfig = {
     nodeHighlightBehavior: true,
     node: {
-      color: nodeColor,
-      size: nodeSize,
+      size: 120,
       highlightStrokeColor: "blue",
     },
     link: {
       highlightColor: "lightblue",
+      semanticStrokeWidth: true,
+      strokeWidth: 1.5
     },
-  };
-
-  const onClickNode = function (nodeId) {
-    const node = data.nodes.find((node) => node.id === nodeId);
-    let commodities = node.Commodities.join(", ");
-    alert(`Commodities for ${nodeId}: ${commodities}`);
+    directed: true,
   };
 
   const onClickLink = function (source, target) {
@@ -59,13 +90,16 @@ const NodeMap = () => {
   };
 
   return (
-    <Graph
-      id="graph-id" // id is mandatory
-      data={data}
-      config={myConfig}
-      onClickNode={onClickNode}
-      onClickLink={onClickLink}
-    />
+    <div style={{ margin: '0 auto', maxWidth: '1200px', padding: '15px'}}>
+      <Graph
+        id="graph-id"
+        data={data}
+        config={myConfig}
+        onClickNode={handleNodeClick}
+        onClickLink={onClickLink}
+      />
+      <NodeDetails node={selectedNode} onClose={() => setSelectedNode(null)} />
+    </div>
   );
 };
 

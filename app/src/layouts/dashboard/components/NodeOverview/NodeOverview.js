@@ -6,7 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
 import NodeMap from "./nodeMap";
-import RiskInput from "../RIsk/RiskInput";
 
 import { useEffect } from 'react';
 
@@ -14,9 +13,13 @@ function NodeOverview() {
   const [selectedNode, setSelectedNode] = useState(null);
   const [risk, setRisk] = useState(null);
 
+  
   useEffect(() => {
     if (selectedNode) {
-      const risk = localStorage.getItem(`risk-${selectedNode.id}`);
+      let risk = localStorage.getItem(`risk-${selectedNode.id}`);
+      if (risk === null) {
+        risk = "0";
+      }
       setRisk(risk);
     }
   }, [selectedNode]);
@@ -36,7 +39,6 @@ function NodeOverview() {
             <Typography variant="body2" color="text.secondary">
               Risk: {risk}
             </Typography>
-            <RiskInput nodeId={selectedNode.id} onSubmit={setRisk} />
           </CardContent>
         </Card>
       )}

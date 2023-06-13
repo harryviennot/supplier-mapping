@@ -1,22 +1,46 @@
-import React, { useEffect } from "react";
+// eslint-disable-next-line
+import React, { useEffect, useState } from "react";
 import { Graph } from "react-d3-graph";
 
 const NodeMap = () => {
   // graph payload (with minimalist structure)
   const data = {
-    nodes: [{ id: "Harry" }, { id: "Sally" }, { id: "Alice" }],
+    nodes: [
+      {
+        id: "Harry",
+        Commodities: ["sas", "esses"],
+      },
+      {
+        id: "Sally",
+        Commodities: ["sdds", "sdsds"],
+      },
+      {
+        id: "Alice",
+        Commodities: ["sas", "esses"],
+      },
+    ],
     links: [
       { source: "Harry", target: "Sally" },
       { source: "Harry", target: "Alice" },
     ],
   };
 
-  // the graph configuration, just override the ones you need
+  const [nodeColor, setNodeColor] = useState("");
+  const [nodeSize, setNodeSize] = useState(120);
+
+  useEffect(() => {
+    if (data.nodes) {
+      setNodeColor(data.nodes[0].Commodities[0]);
+      setNodeSize(120 + data.links.length * 10);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
+
   const myConfig = {
     nodeHighlightBehavior: true,
     node: {
-      color: "lightgreen",
-      size: 120,
+      color: nodeColor,
+      size: nodeSize,
       highlightStrokeColor: "blue",
     },
     link: {
@@ -25,7 +49,9 @@ const NodeMap = () => {
   };
 
   const onClickNode = function (nodeId) {
-    window.alert(`Clicked node ${nodeId}`);
+    const node = data.nodes.find((node) => node.id === nodeId);
+    let commodities = node.Commodities.join(", ");
+    alert(`Commodities for ${nodeId}: ${commodities}`);
   };
 
   const onClickLink = function (source, target) {

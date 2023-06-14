@@ -1,0 +1,192 @@
+{
+    "French-American Chamber Of Commerce (FACC)": {
+        "Location": "N/A",
+        "Commodities": "",
+        "Suppliers": []
+    },
+    "FACC": {
+        "Location": "AT, N/A",
+        "Commodities": "Aerostructure, Material",
+        "Suppliers": [
+            "Archer Aviation Inc."
+        ]
+    },
+    "DE Aerospace": {
+        "Location": "N/A",
+        "Commodities": "",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "FACC AG": {
+        "Location": "AT, Ried im Innkreis",
+        "Commodities": "Aerostructure, Cabin Interiors",
+        "Suppliers": [
+            "Airbus",
+            "Boeing",
+            "Bombardier",
+            "Embraer",
+            "Comac",
+            "Collins Aerospace",
+            "Engine Alliance",
+            "Rolls-Royce",
+            "Diehl",
+            "Safran",
+            "Pratt & Whitney",
+            "Airbus Helicopters",
+            "Dassault",
+            "Sukhoi",
+            "Hawker Beechcraft",
+            "Aviation Partners",
+            "Gulfstream",
+            "Leonardo"
+        ]
+    },
+    "AVIC": {
+        "Location": "CN, Beijing",
+        "Commodities": "",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Airbus": {
+        "Location": "N/A",
+        "Commodities": "N/A",
+        "Suppliers": [
+            "FACC"
+        ]
+    },
+    "Boeing": {
+        "Location": "US, Chicago",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine, Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Bombardier": {
+        "Location": "CA, Montreal",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine, Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Embraer": {
+        "Location": "BR, S\u00e3o Jos\u00e9 dos Campos",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine, Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Comac": {
+        "Location": "CN, Shanghai",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine, Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Collins Aerospace": {
+        "Location": "US, Charlotte",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine, Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Engine Alliance": {
+        "Location": "US, East Hartford",
+        "Commodities": "Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Rolls-Royce": {
+        "Location": "UK, Derby",
+        "Commodities": "Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Diehl": {
+        "Location": "DE, Nuremberg",
+        "Commodities": "Material, Equipments, Cabine",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Safran": {
+        "Location": "FR, Paris",
+        "Commodities": "Propulsion, Equipments",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Pratt & Whitney": {
+        "Location": "US, East Hartford",
+        "Commodities": "Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Airbus Helicopters": {
+        "Location": "FR, Marignane",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine, Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Dassault": {
+        "Location": "FR, Saint-Cloud",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Sukhoi": {
+        "Location": "RU, Moscow",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine, Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Hawker Beechcraft": {
+        "Location": "US, Wichita",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Aviation Partners": {
+        "Location": "US, Seattle",
+        "Commodities": "Aerostructure, Material, Equipments",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Gulfstream": {
+        "Location": "US, Savannah",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Leonardo": {
+        "Location": "IT, Rome",
+        "Commodities": "Aerostructure, Material, Equipments, Cabine, Propulsion",
+        "Suppliers": [
+            ""
+        ]
+    },
+    "Archer": {
+        "Location": "US, Santa Clara",
+        "Commodities": "eVTOL aircraft",
+        "Suppliers": [
+            "FACC"
+        ]
+    },
+    "Archer Aviation Inc.": {
+        "Location": "US, Santa Clara",
+        "Commodities": "eVTOL aircraft",
+        "Suppliers": [
+            "FACC"
+        ]
+    }
+}

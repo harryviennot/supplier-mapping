@@ -1,389 +1,219 @@
 {
   "nodes": [
-      {
-          "id": "French-American Chamber Of Commerce (FACC)",
-          "location": [
-              "N/A"
-          ],
-          "commodities": [
-              ""
-          ]
-      },
-      {
-          "id": "FACC",
-          "location": [
-              "AT",
-              "N/A"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material"
-          ]
-      },
-      {
-          "id": "DE Aerospace",
-          "location": [
-              "N/A"
-          ],
-          "commodities": [
-              ""
-          ]
-      },
-      {
-          "id": "FACC AG",
-          "location": [
-              "AT",
-              "Ried im Innkreis"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Cabin Interiors"
-          ]
-      },
-      {
-          "id": "AVIC",
-          "location": [
-              "CN",
-              "Beijing"
-          ],
-          "commodities": [
-              ""
-          ]
-      },
-      {
-          "id": "Airbus",
-          "location": [
-              "N/A"
-          ],
-          "commodities": [
-              "N/A"
-          ]
-      },
-      {
-          "id": "Boeing",
-          "location": [
-              "US",
-              "Chicago"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine",
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Bombardier",
-          "location": [
-              "CA",
-              "Montreal"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine",
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Embraer",
-          "location": [
-              "BR",
-              "São José dos Campos"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine",
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Comac",
-          "location": [
-              "CN",
-              "Shanghai"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine",
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Collins Aerospace",
-          "location": [
-              "US",
-              "Charlotte"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine",
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Engine Alliance",
-          "location": [
-              "US",
-              "East Hartford"
-          ],
-          "commodities": [
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Rolls-Royce",
-          "location": [
-              "UK",
-              "Derby"
-          ],
-          "commodities": [
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Diehl",
-          "location": [
-              "DE",
-              "Nuremberg"
-          ],
-          "commodities": [
-              "Material",
-              "Equipments",
-              "Cabine"
-          ]
-      },
-      {
-          "id": "Safran",
-          "location": [
-              "FR",
-              "Paris"
-          ],
-          "commodities": [
-              "Propulsion",
-              "Equipments"
-          ]
-      },
-      {
-          "id": "Pratt & Whitney",
-          "location": [
-              "US",
-              "East Hartford"
-          ],
-          "commodities": [
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Airbus Helicopters",
-          "location": [
-              "FR",
-              "Marignane"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine",
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Dassault",
-          "location": [
-              "FR",
-              "Saint-Cloud"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine"
-          ]
-      },
-      {
-          "id": "Sukhoi",
-          "location": [
-              "RU",
-              "Moscow"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine",
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Hawker Beechcraft",
-          "location": [
-              "US",
-              "Wichita"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine"
-          ]
-      },
-      {
-          "id": "Aviation Partners",
-          "location": [
-              "US",
-              "Seattle"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments"
-          ]
-      },
-      {
-          "id": "Gulfstream",
-          "location": [
-              "US",
-              "Savannah"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine"
-          ]
-      },
-      {
-          "id": "Leonardo",
-          "location": [
-              "IT",
-              "Rome"
-          ],
-          "commodities": [
-              "Aerostructure",
-              "Material",
-              "Equipments",
-              "Cabine",
-              "Propulsion"
-          ]
-      },
-      {
-          "id": "Archer",
-          "location": [
-              "US",
-              "Santa Clara"
-          ],
-          "commodities": [
-              "eVTOL aircraft"
-          ]
-      },
-      {
-          "id": "Archer Aviation Inc.",
-          "location": [
-              "US",
-              "Santa Clara"
-          ],
-          "commodities": [
-              "eVTOL aircraft"
-          ]
-      }
+    {
+      "id": "French-American Chamber Of Commerce (FACC)",
+      "location": ["N/A"],
+      "commodities": [""]
+    },
+    {
+      "id": "FACC",
+      "location": ["AT", "N/A"],
+      "commodities": ["Aerostructure", "Material"]
+    },
+    {
+      "id": "DE Aerospace",
+      "location": ["N/A"],
+      "commodities": [""]
+    },
+    {
+      "id": "FACC AG",
+      "location": ["AT", "Ried im Innkreis"],
+      "commodities": ["Aerostructure", "Cabin Interiors"]
+    },
+    {
+      "id": "AVIC",
+      "location": ["CN", "Beijing"],
+      "commodities": [""]
+    },
+    {
+      "id": "Airbus",
+      "location": ["N/A"],
+      "commodities": ["N/A"]
+    },
+    {
+      "id": "Boeing",
+      "location": ["US", "Chicago"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine", "Propulsion"]
+    },
+    {
+      "id": "Bombardier",
+      "location": ["CA", "Montreal"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine", "Propulsion"]
+    },
+    {
+      "id": "Embraer",
+      "location": ["BR", "São José dos Campos"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine", "Propulsion"]
+    },
+    {
+      "id": "Comac",
+      "location": ["CN", "Shanghai"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine", "Propulsion"]
+    },
+    {
+      "id": "Collins Aerospace",
+      "location": ["US", "Charlotte"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine", "Propulsion"]
+    },
+    {
+      "id": "Engine Alliance",
+      "location": ["US", "East Hartford"],
+      "commodities": ["Propulsion"]
+    },
+    {
+      "id": "Rolls-Royce",
+      "location": ["UK", "Derby"],
+      "commodities": ["Propulsion"]
+    },
+    {
+      "id": "Diehl",
+      "location": ["DE", "Nuremberg"],
+      "commodities": ["Material", "Equipments", "Cabine"]
+    },
+    {
+      "id": "Safran",
+      "location": ["FR", "Paris"],
+      "commodities": ["Propulsion", "Equipments"]
+    },
+    {
+      "id": "Pratt & Whitney",
+      "location": ["US", "East Hartford"],
+      "commodities": ["Propulsion"]
+    },
+    {
+      "id": "Airbus Helicopters",
+      "location": ["FR", "Marignane"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine", "Propulsion"]
+    },
+    {
+      "id": "Dassault",
+      "location": ["FR", "Saint-Cloud"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine"]
+    },
+    {
+      "id": "Sukhoi",
+      "location": ["RU", "Moscow"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine", "Propulsion"]
+    },
+    {
+      "id": "Hawker Beechcraft",
+      "location": ["US", "Wichita"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine"]
+    },
+    {
+      "id": "Aviation Partners",
+      "location": ["US", "Seattle"],
+      "commodities": ["Aerostructure", "Material", "Equipments"]
+    },
+    {
+      "id": "Gulfstream",
+      "location": ["US", "Savannah"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine"]
+    },
+    {
+      "id": "Leonardo",
+      "location": ["IT", "Rome"],
+      "commodities": ["Aerostructure", "Material", "Equipments", "Cabine", "Propulsion"]
+    },
+    {
+      "id": "Archer",
+      "location": ["US", "Santa Clara"],
+      "commodities": ["eVTOL aircraft"]
+    },
+    {
+      "id": "Archer Aviation Inc.",
+      "location": ["US", "Santa Clara"],
+      "commodities": ["eVTOL aircraft"]
+    }
   ],
   "links": [
-      {
-          "source": "FACC",
-          "target": "Archer Aviation Inc."
-      },
-      {
-          "source": "FACC AG",
-          "target": "Airbus"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Boeing"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Bombardier"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Embraer"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Comac"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Collins Aerospace"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Engine Alliance"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Rolls-Royce"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Diehl"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Safran"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Pratt & Whitney"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Airbus Helicopters"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Dassault"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Sukhoi"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Hawker Beechcraft"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Aviation Partners"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Gulfstream"
-      },
-      {
-          "source": "FACC AG",
-          "target": "Leonardo"
-      },
-      {
-          "source": "Airbus",
-          "target": "FACC"
-      },
-      {
-          "source": "Archer",
-          "target": "FACC"
-      },
-      {
-          "source": "Archer Aviation Inc.",
-          "target": "FACC"
-      }
+    {
+      "source": "FACC",
+      "target": "Archer Aviation Inc."
+    },
+    {
+      "source": "FACC AG",
+      "target": "Airbus"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Boeing"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Bombardier"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Embraer"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Comac"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Collins Aerospace"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Engine Alliance"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Rolls-Royce"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Diehl"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Safran"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Pratt & Whitney"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Airbus Helicopters"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Dassault"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Sukhoi"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Hawker Beechcraft"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Aviation Partners"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Gulfstream"
+    },
+    {
+      "source": "FACC AG",
+      "target": "Leonardo"
+    },
+    {
+      "source": "Airbus",
+      "target": "FACC"
+    },
+    {
+      "source": "Archer",
+      "target": "FACC"
+    },
+    {
+      "source": "Archer Aviation Inc.",
+      "target": "FACC"
+    }
   ]
 }

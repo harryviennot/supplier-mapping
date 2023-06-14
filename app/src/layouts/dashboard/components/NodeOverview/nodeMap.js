@@ -11,14 +11,17 @@ const NodeMap = ({ onClickNode }) => {
     links: [],
   });
 
-  const colorMapping = useMemo(() => ({
-    "Aerostructure": "red",
-    "Material": "green",
-    "Equipments": "blue",
-    "Cabine": "yellow",
-    "Propulsion": "purple",
-  }), []);
-  
+  const colorMapping = useMemo(
+    () => ({
+      Aerostructure: "red",
+      Material: "green",
+      Equipments: "blue",
+      Cabine: "yellow",
+      Propulsion: "purple",
+    }),
+    []
+  );
+
   useEffect(() => {
     fetch("/data.json")
       .then((response) => response.json())
@@ -121,7 +124,7 @@ const NodeMap = ({ onClickNode }) => {
       color: "color",
     },
     directed: true,
-    width: "650",
+    // aspectRation: 1.5,
     height: "400",
   };
 

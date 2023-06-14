@@ -35,14 +35,14 @@ function Dashboard() {
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox py={5}>
-        <MDBox>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={8}>
-              <NodeOverview />
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <Locations />
-            </Grid>
+        <MDBox mt={3}>
+          <Grid item xs={12} md={6} lg={8}>
+            <NodeOverview />
+          </Grid>
+        </MDBox>
+        <MDBox mt={3}>
+          <Grid item xs={12} md={6} lg={4}>
+            <Locations />
           </Grid>
         </MDBox>
         <MDBox mt={3}>

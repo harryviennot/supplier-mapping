@@ -3,6 +3,7 @@ import { Graph } from "react-d3-graph";
 import { Button } from "@mui/material";
 import NodeDetails from "./nodeDetails";
 import { Box, Slider, Typography } from "@mui/material";
+import ColorLegend from "./ColorLegend";
 
 const NodeMap = ({ onClickNode }) => {
   const [selectedNode, setSelectedNode] = useState(null);
@@ -18,7 +19,7 @@ const NodeMap = ({ onClickNode }) => {
     "Cabine": "yellow",
     "Propulsion": "purple",
   }), []);
-  
+
   useEffect(() => {
     fetch("/data.json")
       .then((response) => response.json())
@@ -121,7 +122,7 @@ const NodeMap = ({ onClickNode }) => {
       color: "color",
     },
     directed: true,
-    width: "650",
+    width: "1000",
     height: "400",
   };
 

@@ -3,17 +3,23 @@ import { Treemap } from "@ant-design/plots";
 
 const LocationTree = ({ filter }) => {
   const [fetchData, setFetchData] = useState([]);
+  const [countryData, setCountryData] = useState({});
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
+
+  const getCountryByCode = (code) => {
+    const country = countryData[code];
+    return country ? country : "N/A";
+  };
 
   const transformData = (data) => {
     setLoading(true);
     let countryMap = {};
     data.forEach((item) => {
       if (!item.location || item.location.length === 0) return;
-      let country = item.location[0];
+      const country = getCountryByCode(item.location[0]);
       if (country === "N/A") return;
-      let city = item.location[1];
+      const city = item.location[1];
       if (!countryMap[country]) {
         countryMap[country] = { name: country, country: country, value: 0 };
         filter === "city" && (countryMap[country].children = []);
@@ -36,13 +42,22 @@ const LocationTree = ({ filter }) => {
       children: transformedData,
     };
 
-    console.log(localData);
-
     setData(localData);
     setLoading(false);
   };
 
   useEffect(() => {
+    fetch("/countries.csv")
+      .then((response) => response.text())
+      .then((text) => {
+        let data = {};
+        const rows = text.split("\n");
+        rows.forEach((row) => {
+          let [countryCode, x, y, country] = row.split(";");
+          data[countryCode] = country.replace(/\r$/, "");
+        });
+        setCountryData(data);
+      });
     fetch("/data.json")
       .then((response) => response.json())
       .then((data) => {

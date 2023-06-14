@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { Graph } from "react-d3-graph";
 import { Button } from "@mui/material";
 import NodeDetails from "./nodeDetails";
@@ -10,6 +10,43 @@ const NodeMap = ({ onClickNode }) => {
     nodes: [],
     links: [],
   });
+
+  const graphContainerRef = useRef(null);
+
+  const [graphConfig, setGraphConfig] = useState({
+    width: 800, // initial width, will be updated once the container is measured
+    height: 600, // initial height, will be updated once the container is measured
+    nodeHighlightBehavior: true,
+    node: {
+      size: 120,
+      highlightStrokeColor: "blue",
+    },
+    link: {
+      highlightColor: "lightblue",
+      semanticStrokeWidth: true,
+      strokeWidth: 1.5,
+      color: "color",
+    },
+    directed: true,
+  });
+
+  useEffect(() => {
+    const updateGraphSize = () => {
+      if (graphContainerRef.current) {
+        const boundingRect = graphContainerRef.current.getBoundingClientRect();
+        setGraphConfig((config) => ({
+          ...config,
+          width: boundingRect.width,
+          height: boundingRect.height,
+        }));
+      }
+    };
+
+    updateGraphSize();
+
+    window.addEventListener("resize", updateGraphSize);
+    return () => window.removeEventListener("resize", updateGraphSize);
+  }, []);
 
   const colorMapping = useMemo(
     () => ({
@@ -111,23 +148,6 @@ const NodeMap = ({ onClickNode }) => {
     }
   }, [selectedNode, colorMapping, data]);
 
-  const myConfig = {
-    nodeHighlightBehavior: true,
-    node: {
-      size: 120,
-      highlightStrokeColor: "blue",
-    },
-    link: {
-      highlightColor: "lightblue",
-      semanticStrokeWidth: true,
-      strokeWidth: 1.5,
-      color: "color",
-    },
-    directed: true,
-    // aspectRation: 1.5,
-    height: "400",
-  };
-
   const onClickLink = function (source, target) {
     window.alert(`Clicked link between ${source} and ${target}`);
   };
@@ -162,27 +182,29 @@ const NodeMap = ({ onClickNode }) => {
           Reset
         </Button>
       </div>
-      <Graph
-        id="graph-id"
-        data={{
-          nodes: data.nodes.filter(
-            (node) => node.risk >= riskRange[0] && node.risk <= riskRange[1]
-          ),
-          links: data.links.filter((link) => {
-            let sourceRisk = data.nodes.find((node) => node.id === link.source).risk;
-            let targetRisk = data.nodes.find((node) => node.id === link.target).risk;
-            return (
-              sourceRisk >= riskRange[0] &&
-              sourceRisk <= riskRange[1] &&
-              targetRisk >= riskRange[0] &&
-              targetRisk <= riskRange[1]
-            );
-          }),
-        }}
-        config={myConfig}
-        onClickNode={handleNodeClick}
-        onClickLink={onClickLink}
-      />
+      <div ref={graphContainerRef} style={{ width: "100%", height: "100%" }}>
+        <Graph
+          id="graph-id"
+          data={{
+            nodes: data.nodes.filter(
+              (node) => node.risk >= riskRange[0] && node.risk <= riskRange[1]
+            ),
+            links: data.links.filter((link) => {
+              let sourceRisk = data.nodes.find((node) => node.id === link.source).risk;
+              let targetRisk = data.nodes.find((node) => node.id === link.target).risk;
+              return (
+                sourceRisk >= riskRange[0] &&
+                sourceRisk <= riskRange[1] &&
+                targetRisk >= riskRange[0] &&
+                targetRisk <= riskRange[1]
+              );
+            }),
+          }}
+          config={graphConfig}
+          onClickNode={handleNodeClick}
+          onClickLink={onClickLink}
+        />
+      </div>
       <NodeDetails node={selectedNode} onClose={() => setSelectedNode(null)} />
     </div>
   );

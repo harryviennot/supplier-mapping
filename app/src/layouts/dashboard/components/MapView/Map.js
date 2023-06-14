@@ -46,7 +46,7 @@ const geoUrl =
 const MapChart = () => {
   const [loading, setLoading] = useState(true);
   const [countryData, setCountryData] = useState({});
-  const [maxValue, setMaxValue] = useState(0);
+  const [maxValue] = useState(0);
 
   useEffect(() => {
     setLoading(true);
@@ -56,7 +56,7 @@ const MapChart = () => {
         const data = {};
         const rows = text.split("\n");
         rows.forEach((row) => {
-          const [countryCode, lat, lon, country] = row.split(";");
+          const [countryCode, lat, lon] = row.split(";");
           data[countryCode] = {
             lat: parseFloat(lat),
             lng: parseFloat(lon),

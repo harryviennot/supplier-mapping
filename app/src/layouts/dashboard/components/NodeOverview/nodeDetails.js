@@ -14,8 +14,9 @@ const NodeDetails = ({ node, onClose }) => {
     }}>
       <h2>Node Details:</h2>
       <p><strong>Name:</strong> {node.id}</p>
-      <p><strong>Commodities:</strong> {node.Commodities.join(', ')}</p>
+      <p><strong>Commodities:</strong> {node.commodities.join(', ')}</p>
       <p><strong>Risk:</strong> {risk}</p>
+      <p><strong>Location:</strong> {node.location.join(', ')}</p>
       <button onClick={onClose} style={{ padding: '5px 10px', borderRadius: '5px', cursor: 'pointer'}}>Close</button>
     </div>
   );

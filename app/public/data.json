@@ -2,24 +2,33 @@
     "nodes": [
       {
         "id": "Harry",
-        "Commodities": ["bslack", "esses"],
-        "locationCo": ["France", "Paris"]
+        "commodities": ["bslack", "esses"],
+        "location": ["France", "Paris"]
       },
       {
         "id": "Sally",
-        "Commodities": ["sdds", "sdsds"],
-        "locationCo": ["France", "Paris"]
+        "commodities": ["sdds", "sdsds"],
+        "location": ["France", "Paris"]
       },
       {
         "id": "Alice",
-        "Commodities": ["sas", "esses"],
-        "locationCo": ["France", "Paris"]
+        "commodities": ["sas", "esses"],
+        "location": ["France", "Paris"]
       },
       {
         "id": "Mario",
-        "Commodities": ["sdds", "sdsds"],
-        "locationCo": ["France", "Paris"]
-      }
+        "commodities": ["sdds", "sdsds"],
+        "location": ["France", "Paris"]
+      },
+      {
+        "id": "test1",
+        "commodities": ["sdds", "sdsds"],
+        "location": ["France", "Paris"]
+      },
+      {"id": "test2",
+      "commodities": ["sdds", "sdsds"],
+      "location": ["France", "Paris"]}
+
     ],
     "links": [
       { "source": "Harry", "target": "Sally" },
@@ -28,7 +37,9 @@
       { "source": "Sally", "target": "Alice" },
       { "source": "Sally", "target": "Mario" },
       { "source": "Alice", "target": "Mario"},
-      {"source" :"Sally", "target": "Harry"}
+      {"source" :"Sally", "target": "Harry"},
+      {"source" :"Mario", "target": "test1"},
+      {"source" :"test1", "target": "test2"}
     ]
   }
   

@@ -1,43 +1,36 @@
 {
     "nodes": [
         {
+            "id": "Airbus",
+            "location": [
+                "EU",
+                "Toulouse"
+            ],
+            "commodities": [
+                "Aerostructure",
+                "Cabin",
+                "Propulsion",
+                "Equipments"
+            ]
+        },
+        {
             "id": "French-American Chamber Of Commerce (FACC)",
             "location": [
-                "N/A"
+                "United States",
+                "Multiple Cities"
             ],
             "commodities": [
-                ""
+                "N/A"
             ]
         },
         {
-            "id": "FACC",
+            "id": "Archer Aviation Inc.",
             "location": [
-                "AT",
+                "US",
+                "Santa Clara"
+            ],
+            "commodities": [
                 "N/A"
-            ],
-            "commodities": [
-                "Aerostructure",
-                "Material"
-            ]
-        },
-        {
-            "id": "DE Aerospace",
-            "location": [
-                "N/A"
-            ],
-            "commodities": [
-                ""
-            ]
-        },
-        {
-            "id": "FACC AG",
-            "location": [
-                "AT",
-                "Ried im Innkreis"
-            ],
-            "commodities": [
-                "Aerostructure",
-                "Cabin Interiors"
             ]
         },
         {
@@ -47,11 +40,15 @@
                 "Beijing"
             ],
             "commodities": [
-                ""
+                "Aerostructure",
+                "Material",
+                "Equipment",
+                "Cabin",
+                "Propulsion"
             ]
         },
         {
-            "id": "Airbus",
+            "id": "DE Aerospace Solutions",
             "location": [
                 "N/A"
             ],
@@ -60,10 +57,24 @@
             ]
         },
         {
+            "id": "FACC",
+            "location": [
+                "AT",
+                "Ried im Innkreis"
+            ],
+            "commodities": [
+                "Aerostructure",
+                "Material",
+                "Equipment",
+                "Cabin",
+                "Propulsion"
+            ]
+        },
+        {
             "id": "Boeing",
             "location": [
                 "US",
-                "Chicago"
+                "N/A"
             ],
             "commodities": [
                 "Aerostructure",
@@ -81,10 +92,9 @@
             ],
             "commodities": [
                 "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine",
-                "Propulsion"
+                "Cabin",
+                "Propulsion",
+                "Equipments"
             ]
         },
         {
@@ -95,10 +105,9 @@
             ],
             "commodities": [
                 "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine",
-                "Propulsion"
+                "Cabin",
+                "Propulsion",
+                "Equipments"
             ]
         },
         {
@@ -109,10 +118,9 @@
             ],
             "commodities": [
                 "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine",
-                "Propulsion"
+                "Cabin",
+                "Propulsion",
+                "Equipments"
             ]
         },
         {
@@ -122,11 +130,7 @@
                 "Charlotte"
             ],
             "commodities": [
-                "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine",
-                "Propulsion"
+                "Equipments"
             ]
         },
         {
@@ -143,7 +147,7 @@
             "id": "Rolls-Royce",
             "location": [
                 "UK",
-                "Derby"
+                "London"
             ],
             "commodities": [
                 "Propulsion"
@@ -153,12 +157,10 @@
             "id": "Diehl",
             "location": [
                 "DE",
-                "Nuremberg"
+                "Nürnberg"
             ],
             "commodities": [
-                "Material",
-                "Equipments",
-                "Cabine"
+                "Equipments"
             ]
         },
         {
@@ -185,15 +187,14 @@
         {
             "id": "Airbus Helicopters",
             "location": [
-                "FR",
+                "EU",
                 "Marignane"
             ],
             "commodities": [
                 "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine",
-                "Propulsion"
+                "Cabin",
+                "Propulsion",
+                "Equipments"
             ]
         },
         {
@@ -204,9 +205,9 @@
             ],
             "commodities": [
                 "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine"
+                "Cabin",
+                "Propulsion",
+                "Equipments"
             ]
         },
         {
@@ -217,10 +218,9 @@
             ],
             "commodities": [
                 "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine",
-                "Propulsion"
+                "Cabin",
+                "Propulsion",
+                "Equipments"
             ]
         },
         {
@@ -231,9 +231,9 @@
             ],
             "commodities": [
                 "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine"
+                "Cabin",
+                "Propulsion",
+                "Equipments"
             ]
         },
         {
@@ -243,9 +243,7 @@
                 "Seattle"
             ],
             "commodities": [
-                "Aerostructure",
-                "Material",
-                "Equipments"
+                "Aerostructure"
             ]
         },
         {
@@ -256,9 +254,9 @@
             ],
             "commodities": [
                 "Aerostructure",
-                "Material",
-                "Equipments",
-                "Cabine"
+                "Cabin",
+                "Propulsion",
+                "Equipments"
             ]
         },
         {
@@ -266,6 +264,133 @@
             "location": [
                 "IT",
                 "Rome"
+            ],
+            "commodities": [
+                "Equipments"
+            ]
+        },
+        {
+            "id": "Fischer Ski",
+            "location": [
+                "N/A"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "Alaska Airlines",
+            "location": [
+                "US",
+                "Seattle"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "IIM+",
+            "location": [
+                "N/A"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "Archer",
+            "location": [
+                "US",
+                "Santa Clara"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "BANDES DE MARCHE COOPÉRATIVE",
+            "location": [
+                "N/A"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "Wesco",
+            "location": [
+                "N/A"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "Wesco International",
+            "location": [
+                "US",
+                "Pittsburgh"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "Anixter",
+            "location": [
+                "N/A"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "Rahi Systems Holdings, Inc.",
+            "location": [
+                "US",
+                "Fremont"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "WESCO Distribution, Inc.",
+            "location": [
+                "N/A"
+            ],
+            "commodities": [
+                "Electrical and industrial supplies",
+                "power distribution equipment",
+                "lighting and lighting control systems",
+                "safety products",
+                "supply chain management and logistics services"
+            ]
+        },
+        {
+            "id": "OMNIA Partners",
+            "location": [
+                "USA",
+                "Franklin"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "Anixter International Inc.",
+            "location": [
+                "N/A"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "GE",
+            "location": [
+                "US",
+                "Chicago"
             ],
             "commodities": [
                 "Aerostructure",
@@ -276,114 +401,196 @@
             ]
         },
         {
-            "id": "Archer",
+            "id": "CFM International",
             "location": [
-                "US",
-                "Santa Clara"
+                "N/A"
             ],
             "commodities": [
-                "eVTOL aircraft"
+                "N/A"
             ]
         },
         {
-            "id": "Archer Aviation Inc.",
+            "id": "Snecma",
             "location": [
-                "US",
-                "Santa Clara"
+                "N/A"
             ],
             "commodities": [
-                "eVTOL aircraft"
+                "N/A"
+            ]
+        },
+        {
+            "id": "COMAC",
+            "location": [
+                "CN",
+                "Shanghai"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "GE-AVIC Civil Avionics Systems Company Limited",
+            "location": [
+                "CN",
+                "Shanghai"
+            ],
+            "commodities": [
+                "Avionics Systems"
+            ]
+        },
+        {
+            "id": "AIM Altitude",
+            "location": [
+                "GB",
+                "Byfleet"
+            ],
+            "commodities": [
+                "Cabine"
+            ]
+        },
+        {
+            "id": "AVIC Cabin Systems (UK)",
+            "location": [
+                "GB",
+                "N/A"
+            ],
+            "commodities": [
+                "Cabine"
+            ]
+        },
+        {
+            "id": "Eurostep",
+            "location": [
+                "SE",
+                "Stockholm"
+            ],
+            "commodities": [
+                "N/A"
+            ]
+        },
+        {
+            "id": "AVIC Digital",
+            "location": [
+                "CN",
+                "Beijing"
+            ],
+            "commodities": [
+                "N/A"
             ]
         }
     ],
     "links": [
         {
+            "source": "French-American Chamber Of Commerce (FACC)",
+            "target": "N/A"
+        },
+        {
+            "source": "Archer Aviation Inc.",
+            "target": "French-American Chamber Of Commerce (FACC)"
+        },
+        {
+            "source": "DE Aerospace Solutions",
+            "target": "N/A"
+        },
+        {
             "source": "FACC",
-            "target": "Archer Aviation Inc."
+            "target": "AVIC"
         },
         {
-            "source": "FACC AG",
-            "target": "Airbus"
+            "source": "Boeing",
+            "target": "AVIC"
         },
         {
-            "source": "FACC AG",
-            "target": "Boeing"
+            "source": "Boeing",
+            "target": "AIM Altitude"
         },
         {
-            "source": "FACC AG",
-            "target": "Bombardier"
+            "source": "Fischer Ski",
+            "target": "N/A"
         },
         {
-            "source": "FACC AG",
-            "target": "Embraer"
+            "source": "Alaska Airlines",
+            "target": "N/A"
         },
         {
-            "source": "FACC AG",
-            "target": "Comac"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Collins Aerospace"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Engine Alliance"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Rolls-Royce"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Diehl"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Safran"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Pratt & Whitney"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Airbus Helicopters"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Dassault"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Sukhoi"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Hawker Beechcraft"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Aviation Partners"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Gulfstream"
-        },
-        {
-            "source": "FACC AG",
-            "target": "Leonardo"
-        },
-        {
-            "source": "Airbus",
-            "target": "FACC"
+            "source": "IIM+",
+            "target": "N/A"
         },
         {
             "source": "Archer",
             "target": "FACC"
         },
         {
-            "source": "Archer Aviation Inc.",
-            "target": "FACC"
+            "source": "BANDES DE MARCHE COOPÉRATIVE",
+            "target": "N/A"
+        },
+        {
+            "source": "Wesco",
+            "target": "N/A"
+        },
+        {
+            "source": "Anixter",
+            "target": "N/A"
+        },
+        {
+            "source": "WESCO Distribution, Inc.",
+            "target": "Anixter International Inc."
+        },
+        {
+            "source": "OMNIA Partners",
+            "target": "WESCO Distribution, Inc."
+        },
+        {
+            "source": "Anixter International Inc.",
+            "target": "WESCO International, Inc."
+        },
+        {
+            "source": "GE",
+            "target": "AVIC"
+        },
+        {
+            "source": "CFM International",
+            "target": "GE"
+        },
+        {
+            "source": "CFM International",
+            "target": "Snecma"
+        },
+        {
+            "source": "Snecma",
+            "target": "CFM International"
+        },
+        {
+            "source": "COMAC",
+            "target": "GE-AVIC Civil Avionics Systems Company Limited"
+        },
+        {
+            "source": "GE-AVIC Civil Avionics Systems Company Limited",
+            "target": "GE"
+        },
+        {
+            "source": "GE-AVIC Civil Avionics Systems Company Limited",
+            "target": "AVIC"
+        },
+        {
+            "source": "AIM Altitude",
+            "target": "AVIC Cabin Systems"
+        },
+        {
+            "source": "AVIC Cabin Systems (UK)",
+            "target": "AVIC"
+        },
+        {
+            "source": "AVIC Cabin Systems (UK)",
+            "target": "AIM Altitude"
+        },
+        {
+            "source": "Eurostep",
+            "target": "AVIC Digital"
+        },
+        {
+            "source": "AVIC Digital",
+            "target": "Eurostep"
         }
     ]
 }

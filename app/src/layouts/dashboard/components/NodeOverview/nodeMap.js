@@ -12,6 +12,7 @@ const NodeMap = ({ onClickNode }) => {
   });
 
   const graphContainerRef = useRef(null);
+  const graphRef = useRef(null);
 
   const [graphConfig, setGraphConfig] = useState({
     width: 800, // initial width, will be updated once the container is measured
@@ -36,7 +37,7 @@ const NodeMap = ({ onClickNode }) => {
         const boundingRect = graphContainerRef.current.getBoundingClientRect();
         setGraphConfig((config) => ({
           ...config,
-          width: boundingRect.width,
+          width: boundingRect.width - 10,
           height: boundingRect.height,
         }));
       }
@@ -156,6 +157,10 @@ const NodeMap = ({ onClickNode }) => {
     const newData = { ...data };
     newData.links.forEach((link) => (link.color = "gray"));
     setData(newData);
+    console.log(graphRef.current);
+    if (graphRef.current) {
+      graphRef.current.resetNodesPositions();
+    }
   };
 
   return (
@@ -203,6 +208,7 @@ const NodeMap = ({ onClickNode }) => {
           config={graphConfig}
           onClickNode={handleNodeClick}
           onClickLink={onClickLink}
+          automaticRearrangeAfterDropNode={true}
         />
       </div>
       <NodeDetails node={selectedNode} onClose={() => setSelectedNode(null)} />

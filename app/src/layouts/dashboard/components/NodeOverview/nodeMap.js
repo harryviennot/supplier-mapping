@@ -3,6 +3,7 @@ import { Graph } from "react-d3-graph";
 import { Button } from "@mui/material";
 import NodeDetails from "./nodeDetails";
 import { Box, Slider, Typography } from "@mui/material";
+import ColorLegend from "./ColorLegend";
 
 const NodeMap = ({ onClickNode }) => {
   const [selectedNode, setSelectedNode] = useState(null);
@@ -11,16 +12,13 @@ const NodeMap = ({ onClickNode }) => {
     links: [],
   });
 
-  const colorMapping = useMemo(
-    () => ({
-      Aerostructure: "red",
-      Material: "green",
-      Equipments: "blue",
-      Cabine: "yellow",
-      Propulsion: "purple",
-    }),
-    []
-  );
+  const colorMapping = useMemo(() => ({
+    "Aerostructure": "red",
+    "Material": "green",
+    "Equipments": "blue",
+    "Cabine": "yellow",
+    "Propulsion": "purple",
+  }), []);
 
   useEffect(() => {
     fetch("/data.json")
@@ -124,7 +122,7 @@ const NodeMap = ({ onClickNode }) => {
       color: "color",
     },
     directed: true,
-    // aspectRation: 1.5,
+    width: "1500",
     height: "400",
   };
 
@@ -140,6 +138,7 @@ const NodeMap = ({ onClickNode }) => {
 
   return (
     <div style={{ margin: "0 auto", padding: "15px" }}>
+      <ColorLegend />
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <Box sx={{ width: 300 }}>
           <Typography id="range-slider" gutterBottom>

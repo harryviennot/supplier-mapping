@@ -160,7 +160,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           </MDTypography>
         </MDBox>
         <MDBox component={NavLink} to="/" display="flex" alignItems="center">
-          {brand && <img src={`${process.env.PUBLIC_URL}/epic_cute_poney.webp`} alt="logo" style={{ height: '50px', marginRight: '10px' }} />}
+          {brand && <img src={`${process.env.PUBLIC_URL}/epic.jpg`} alt="logo" style={{ height: '50px', marginRight: '10px' }} />}
           <MDBox
             width={!brandName && "100%"}
             sx={(theme) => sidenavLogoLabel(theme, { miniSidenav })}

@@ -11,17 +11,14 @@ const NodeMap = ({ onClickNode }) => {
     links: [],
   });
 
-  const colorMapping = useMemo(
-    () => ({
-      sas: "red",
-      esses: "green",
-      sdds: "blue",
-      sdsds: "yellow",
-      bslack: "purple",
-    }),
-    []
-  );
-
+  const colorMapping = useMemo(() => ({
+    "Aerostructure": "red",
+    "Material": "green",
+    "Equipments": "blue",
+    "Cabine": "yellow",
+    "Propulsion": "purple",
+  }), []);
+  
   useEffect(() => {
     fetch("/data.json")
       .then((response) => response.json())

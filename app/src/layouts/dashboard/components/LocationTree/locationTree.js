@@ -99,7 +99,7 @@ const LocationTree = ({ filter }) => {
 
   useEffect(() => {
     transformData(DBdata);
-  }, [filter]);
+  }, [filter, transformData]);
 
   const config = {
     data,

@@ -24,17 +24,13 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 
-// Data
-import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
-
 // Dashboard components
+
 import NodeOverview from "./components/NodeOverview";
 import MapView from "./components/MapView";
 import Locations from "./components/LocationTree";
 
 function Dashboard() {
-  const { sales, tasks } = reportsLineChartData;
-
   return (
     <DashboardLayout>
       <DashboardNavbar />

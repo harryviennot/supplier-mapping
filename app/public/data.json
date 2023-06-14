@@ -1,0 +1,34 @@
+{
+    "nodes": [
+      {
+        "id": "Harry",
+        "Commodities": ["bslack", "esses"],
+        "locationCo": ["France", "Paris"]
+      },
+      {
+        "id": "Sally",
+        "Commodities": ["sdds", "sdsds"],
+        "locationCo": ["France", "Paris"]
+      },
+      {
+        "id": "Alice",
+        "Commodities": ["sas", "esses"],
+        "locationCo": ["France", "Paris"]
+      },
+      {
+        "id": "Mario",
+        "Commodities": ["sdds", "sdsds"],
+        "locationCo": ["France", "Paris"]
+      }
+    ],
+    "links": [
+      { "source": "Harry", "target": "Sally" },
+      { "source": "Harry", "target": "Alice" },
+      { "source": "Harry", "target": "Mario" },
+      { "source": "Sally", "target": "Alice" },
+      { "source": "Sally", "target": "Mario" },
+      { "source": "Alice", "target": "Mario"},
+      {"source" :"Sally", "target": "Harry"}
+    ]
+  }
+  

@@ -1,29 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Graph } from "react-d3-graph";
 
-const NodeDetails = ({ node, onClose }) => {
-  if (!node) {
-    return null;
-  }
-
-  const risk = localStorage.getItem(`risk-${node.id}`);
-  return (
-    <div style={{
-      border: '1px solid #ddd',
-      borderRadius: '10px',
-      padding: '10px',
-      marginTop: '15px',
-      backgroundColor: '#f9f9f9'
-    }}>
-      <h2>Node Details:</h2>
-      <p><strong>Name:</strong> {node.id}</p>
-      <p><strong>Commodities:</strong> {node.Commodities.join(', ')}</p>
-      <p><strong>Risk:</strong> {risk}</p>
-      <button onClick={onClose} style={{ padding: '5px 10px', borderRadius: '5px', cursor: 'pointer'}}>Close</button>
-    </div>
-  );
-};
-
+import NodeDetails from "./nodeDetails";
+import { Box, Slider, Typography } from '@mui/material';
 
 const NodeMap = ({ onClickNode }) => {
   const [selectedNode, setSelectedNode] = useState(null);
@@ -31,14 +10,53 @@ const NodeMap = ({ onClickNode }) => {
     nodes: [],
     links: []
   });
-
   useEffect(() => {
-    // Load data from a json file
     fetch('/data.json')
       .then(response => response.json())
-      .then(data => setData(data));
+      .then(loadedData => {
+
+        const linkCount = {};
+        let maxLinks = 0;
+
+        loadedData.links.forEach(link => {
+          linkCount[link.source] = (linkCount[link.source] || 0) + 1;
+          linkCount[link.target] = (linkCount[link.target] || 0) + 1;
+
+          maxLinks = Math.max(maxLinks, linkCount[link.source], linkCount[link.target]);
+        });
+
+        const calculateRisk = (nodeId) => {
+          const links = loadedData.links.filter((link) => link.source === nodeId || link.target === nodeId);
+          const normalizedRisk = (links.length / maxLinks) * 10;
+          return normalizedRisk.toFixed(2);
+        };
+
+        loadedData.nodes.forEach(node => {
+          node.size = 120 + (linkCount[node.id] || 0) * 200;
+          node.color = colorMapping[node.Commodities[0]];
+          node.risk = calculateRisk(node.id);
+          localStorage.setItem(`risk-${node.id}`, node.risk);
+        });
+
+        setData(loadedData);
+      });
   }, []);
+
   
+  const [riskRange, setRiskRange] = useState([0, 10]);
+
+  const handleSliderChange = (event, newValue) => {
+    setRiskRange(newValue);
+  };
+
+  // After calculating the risk for each node, you can filter the nodes and links based on the current risk range
+  let filteredNodes = data.nodes.filter(node => node.risk >= riskRange[0] && node.risk <= riskRange[1]);
+  let filteredLinks = data.links.filter(link => {
+    let sourceRisk = data.nodes.find(node => node.id === link.source).risk;
+    let targetRisk = data.nodes.find(node => node.id === link.target).risk;
+    return sourceRisk >= riskRange[0] && sourceRisk <= riskRange[1] && targetRisk >= riskRange[0] && targetRisk <= riskRange[1];
+  });
+
   const handleNodeClick = function (nodeId) {
     const node = data.nodes.find((node) => node.id === nodeId);
     setSelectedNode(node);  // Set the selected node here
@@ -51,31 +69,6 @@ const NodeMap = ({ onClickNode }) => {
     "sdsds": "yellow",
     "bslack": "purple",
   };
-
-// Compute number of links per node
-const linkCount = {};
-let maxLinks = 0;
-data.links.forEach(link => {
-  linkCount[link.source] = (linkCount[link.source] || 0) + 1;
-  linkCount[link.target] = (linkCount[link.target] || 0) + 1;
-
-  maxLinks = Math.max(maxLinks, linkCount[link.source], linkCount[link.target]);
-});
-
-const calculateRisk = (nodeId) => {
-  const links = data.links.filter((link) => link.source === nodeId || link.target === nodeId);
-  const normalizedRisk = (links.length / maxLinks) * 10; // Calculate normalized risk here
-  return normalizedRisk.toFixed(2); // Use toFixed to limit decimal places
-};
-
-// Add a size property, color and risk to each node
-data.nodes.forEach(node => {
-  node.size = 120 + (linkCount[node.id] || 0) * 200;
-  node.color = colorMapping[node.Commodities[0]]; // setting the color according to the first commodity
-  node.risk = calculateRisk(node.id);
-  localStorage.setItem(`risk-${node.id}`, node.risk);
-});
-
 
   const myConfig = {
     nodeHighlightBehavior: true,
@@ -97,15 +90,28 @@ data.nodes.forEach(node => {
   
   return (
     <div style={{ margin: '0 auto', maxWidth: '1200px', padding: '15px'}}>
-      <Graph
-        id="graph-id"
-        data={data}
-        config={myConfig}
-        onClickNode={handleNodeClick}
-        onClickLink={onClickLink}
+    <Box sx={{ width: 300 }}>
+      <Typography id="range-slider" gutterBottom>
+        Risk Range
+      </Typography>
+      <Slider
+        value={riskRange}
+        onChange={handleSliderChange}
+        valueLabelDisplay="auto"
+        aria-labelledby="range-slider"
+        min={0}
+        max={10}
       />
-      <NodeDetails node={selectedNode} onClose={() => setSelectedNode(null)} />
-    </div>
+    </Box>
+    <Graph
+      id="graph-id"
+      data={{ nodes: filteredNodes, links: filteredLinks }} // use filtered data
+      config={myConfig}
+      onClickNode={handleNodeClick}
+      onClickLink={onClickLink}
+    />
+    <NodeDetails node={selectedNode} onClose={() => setSelectedNode(null)} />
+  </div>
   );
 };
 
